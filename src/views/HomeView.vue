@@ -1,23 +1,23 @@
 <template>
   <div class="home">
-    <h3 class="naslov">Početna strana </h3>
+    <h3 class="naslov fw-bold">Početna strana </h3>
     <div v-if="flights">
       <nav>
         <ul class="pagination">
           <li class="page-item">
-            <button class="page-link" type="button" @click="(e) => loadFirst()">First</button>
+            <button class="page-link text-dark" style="background-color: #f1f6fa"  type="button" @click="(e) => loadFirst()">First</button>
           </li>
           <li class="page-item">
-            <button class="page-link" type="button" @click="(e) => loadPrev()">Previous</button>
+            <button class="page-link text-dark" style="background-color: #f1f6fa" type="button" @click="(e) => loadPrev()">Previous</button>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">{{ flights.number + 1 }}</a>
+            <a class="page-link text-dark" style="background-color: #f1f6fa" href="#">{{ flights.number + 1 }}</a>
           </li>
           <li class="page-item">
-            <button class="page-link" type="button" @click="(e) => loadNext()">Next</button>
+            <button class="page-link text-dark" style="background-color: #f1f6fa" type="button" @click="(e) => loadNext()">Next</button>
           </li>
           <li class="page-item">
-            <button class="page-link" type="button" @click="(e) => loadLast()">Last</button>
+            <button class="page-link text-dark" style="background-color: #f1f6fa" type="button" @click="(e) => loadLast()">Last</button>
           </li>
 
 
@@ -41,7 +41,7 @@
             <td>{{ flight.destination }}</td>
             <td>{{ flight.plane }}</td>
             <td>{{ new Date(flight.scheduledAt).toLocaleString('sr-RS') }}</td>
-            <td><button type="button" class="btn btn-outline-primary"
+            <td><button type="button" class="btn btn-outline-secondary text-dark"
                 @click="(e) => showDetails(flight.id)">Detalji</button>
             </td>
           </tr>
