@@ -1,6 +1,6 @@
 <template>
-  <div  style="background-color: #e3f2fd">
-  <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd">
+  <div  style="background-color: #f1f6fa">
+  <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #f1f6fa">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="@/assets/airserbia.png" height="24"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -20,10 +20,10 @@
       </div>
     </div>
   </nav>
-  <div class="container" style="background-color: #e3f2fd">
+  <div class="container" style="background-color: #f1f6fa">
     <router-view />
   </div>
-  <footer class="text-center " style="background-color: #e3f2fd">
+  <footer class="text-center " style="background-color: #f1f6fa">
     &copy; {{ year }} Univerzitet Singidunum
   </footer>
 </div>
