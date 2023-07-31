@@ -23,7 +23,7 @@
 
         </ul>
       </nav>
-      <table class="table table-success table-striped">
+      <table class="table  table-striped">
         <thead>
           <tr>
             <th scope="col">ID</th>

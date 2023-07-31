@@ -1,5 +1,5 @@
 <template>
-    <div class='flight p-3 mb-2 text-white' style="background-color: #C7DBD2">
+    <div class='flight p-3 mb-2 text-white' style="background-color: #E5E9ED">
         <div v-if="flight && mapData && weather">
             <h3 class="text-center fw-bold" style="color: #666D72">Detalji leta</h3>
 
@@ -13,10 +13,10 @@
 
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" style="background-color: #C7DBD2">Broj leta: {{ flight.flightNumber }}</li>
-                        <li class="list-group-item" style="background-color: #C7DBD2">Trenutna temperatura: {{ toCelsious(weather.current.temp) }}</li>
-                        <li class="list-group-item" style="background-color: #C7DBD2">Osecaj: {{ toCelsious(weather.current.feels_like) }}</li>
-                        <li class="list-group-item" style="background-color: #C7DBD2">Vlaznost vazduha: {{ weather.current.humidity }}%</li>
+                        <li class="list-group-item" style="background-color: #E5E9ED">Broj leta: {{ flight.flightNumber }}</li>
+                        <li class="list-group-item" style="background-color: #E5E9ED">Trenutna temperatura: {{ toCelsious(weather.current.temp) }}&deg;C</li>
+                        <li class="list-group-item" style="background-color: #E5E9ED">Osecaj: {{ toCelsious(weather.current.feels_like) }}&deg;C</li>
+                        <li class="list-group-item" style="background-color: #E5E9ED">Vlaznost vazduha: {{ weather.current.humidity }}%</li>
                     </ul>
                 </div>
             </div>
@@ -84,14 +84,14 @@ function toCelsious(p) {
     padding: 10px;
     display: flex;
     flex-direction: row;
-    background-color: #E3F2FD;
+    background-color: #F1F6FA;
 
 
 }
 .card img{
     width: 750px; 
     border-radius: 5px;
-    border:10px solid #C7DBD2;
+    border:10px solid #E5E9ED;
 
 }
 .container-text{
@@ -121,7 +121,7 @@ function toCelsious(p) {
 .mapa{
     width: 750px;
     height: 300px;
-    border:10px solid #E3F2FD;
+    border:10px solid #F1F6FA;
     border-radius: 5px;
 }
 </style>

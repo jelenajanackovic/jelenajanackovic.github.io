@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
 import Flight from '@/views/Flight.vue'
+import SearchView from '@/views/Search.vue'
 
 const routes = [
   {
@@ -27,6 +28,14 @@ const routes = [
       title: 'Let'
     },
     component: Flight
+  },
+  {
+    path: '/search',
+    name: 'search',
+    meta: {
+      title: 'Search'
+    },
+    component: SearchView
   },
 ]
 
