@@ -114,4 +114,9 @@ padding-left: 0px;
 font-weight: 450;
 
 }
+
+body{
+  height: 1000px;
+  background-color: #f1f6fa;
+}
 </style>

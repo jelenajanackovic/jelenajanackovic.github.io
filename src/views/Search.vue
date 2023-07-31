@@ -4,11 +4,13 @@
         <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="desc">Destination:</span>
             <input type="text" class="form-control" placeholder="Unesite destinaciju" aria-describedby="desc" list="destOpt"
-                v-model="tekst" @keypress="(e) => pronadjiLet()" @input="(e)=> autocomplete()" @change="(e)=>pronadjiLet()">
+                v-model="tekst" @keypress="(e) => pronadjiLet()" @input="(e) => autocomplete()"
+                @change="(e) => pronadjiLet()">
             <datalist id="destOpt">
-                <option v-for="option in opcije" :value="option" @click="(e)=> console.log(option)"></option>
+                <option v-for="option in opcije" :value="option" @click="(e) => console.log(option)"></option>
             </datalist>
-            <button  class="page-link text-dark" style="background-color: #f1f6fa" @click="(e) => pronadjiLet()">Pronadji</button>
+            <button class="page-link text-dark" style="background-color: #f1f6fa"
+                @click="(e) => pronadjiLet()">Pronadji</button>
         </div>
         <table class="table table-striped" v-if="letovi">
             <thead>
@@ -23,15 +25,15 @@
             </thead>
             <tbody>
                 <tr v-for="flight in letovi.content">
-            <th scope="row">{{ flight.id }}</th>
-            <td>{{ flight.flightNumber }}</td>
-            <td>{{ flight.destination }}</td>
-            <td>{{ flight.plane }}</td>
-            <td>{{ new Date(flight.scheduledAt).toLocaleString('sr-RS') }}</td>
-            <td><button type="button"  class="btn btn-outline-secondary text-dark"
-                @click="(e) => showDetails(flight.id)">Detalji</button>
-            </td>
-          </tr>
+                    <th scope="row">{{ flight.id }}</th>
+                    <td>{{ flight.flightNumber }}</td>
+                    <td>{{ flight.destination }}</td>
+                    <td>{{ flight.plane }}</td>
+                    <td>{{ new Date(flight.scheduledAt).toLocaleString('sr-RS') }}</td>
+                    <td><button type="button" class="btn btn-outline-secondary text-dark"
+                            @click="(e) => showDetails(flight.id)">Detalji</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -39,7 +41,7 @@
 
 <script setup>
 import FlightService from '@/services/flight.service';
-
+import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
 const tekst = ref();
@@ -60,4 +62,11 @@ function autocomplete() {
         opcije.value = rsp.data
     })
 }
+
+
+const router = useRouter()
+function showDetails(id) {
+    router.push('/flight/' + id)
+}
+
 </script>

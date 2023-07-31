@@ -2,7 +2,7 @@
   <div style="background-color: #f1f6fa">
     <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #f1f6fa">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="@/assets/airserbia.png" height="24"></a>
+        <a class="navbar-brand" style="background-color: white;" href="#"><img src="@/assets/airserbia.png" height="24"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

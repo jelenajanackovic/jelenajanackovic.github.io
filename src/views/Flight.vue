@@ -9,14 +9,14 @@
                     class="img">
                 <div class="container-text">
                     <div class="naslov">
-                        <h5 class="card-title ">{{ mapData.items[0].title }}</h5>
+                        <h5 class="card-title fw-bold">{{ mapData.items[0].title }}</h5>
 
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" style="background-color: #E5E9ED">Broj leta: {{ flight.flightNumber }}</li>
-                        <li class="list-group-item" style="background-color: #E5E9ED">Trenutna temperatura: {{ toCelsious(weather.current.temp) }}&deg;C</li>
-                        <li class="list-group-item" style="background-color: #E5E9ED">Osecaj: {{ toCelsious(weather.current.feels_like) }}&deg;C</li>
-                        <li class="list-group-item" style="background-color: #E5E9ED">Vlaznost vazduha: {{ weather.current.humidity }}%</li>
+                        <li class="list-group-item fw-bold" style="background-color: #E5E9ED ; color: #666D72;" >Broj leta: {{ flight.flightNumber }}</li>
+                        <li class="list-group-item fw-bold" style="background-color: #E5E9ED ; color: #666D72;">Trenutna temperatura: {{ toCelsious(weather.current.temp) }}&deg;C</li>
+                        <li class="list-group-item fw-bold" style="background-color: #E5E9ED ; color: #666D72;">Osecaj: {{ toCelsious(weather.current.feels_like) }}&deg;C</li>
+                        <li class="list-group-item fw-bold" style="background-color: #E5E9ED ; color: #666D72;">Vlaznost vazduha: {{ weather.current.humidity }}%</li>
                     </ul>
                 </div>
             </div>
